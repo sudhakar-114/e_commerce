@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-2xl font-semibold mb-4">Checkout</h2>
+
+<div class="bg-white rounded-lg shadow-md p-6 max-w-2xl">
+  <form action="/place_order" method="post" class="space-y-4">
+    <div>
+      <label class="block font-semibold">Full name</label>
+      <input name="name" required class="w-full border rounded px-3 py-2" />
+    </div>
+    <div>
+      <label class="block font-semibold">Address</label>
+      <textarea name="address" required class="w-full border rounded px-3 py-2"></textarea>
+    </div>
+    <div>
+      <label class="block font-semibold">Payment method</label>
+      <select name="payment" class="w-full border rounded px-3 py-2">
+        <option value="cod">Cash on Delivery</option>
+        <option value="card">Card</option>
+      </select>
+    </div>
+    <button class="bg-yellow-500 text-white px-4 py-2 rounded">Place Order</button>
+  </form>
+</div>
+{% endblock %}

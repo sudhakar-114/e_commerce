@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
+  <h2 class="text-2xl font-bold mb-2">Order placed! 🎉</h2>
+  <p>Thanks {{ name }} — we received your order and will process it shortly.</p>
+  <p class="mt-2"><strong>Payment:</strong> {{ payment }}</p>
+  <a href="/" class="inline-block mt-4 text-blue-600 hover:underline">Back to home</a>
+</div>
+{% endblock %}
